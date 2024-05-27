@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_hooks/counter_page.dart';
+import 'package:learn_flutter_hooks/login_hooks_page.dart';
 
 import 'login_page.dart';
 
@@ -41,6 +42,17 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Go to Login Page'),
             ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginHooksPage(),
+                      ),
+                    ),
+                child: const Text('Go to Hooks Login Page')),
           ],
         ),
       ),
