@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_hooks/counter_page.dart';
 import 'package:learn_flutter_hooks/login_hooks_page.dart';
+import 'package:learn_flutter_hooks/useEffect-examples/counter_ue_page.dart';
+import 'package:learn_flutter_hooks/useEffect-examples/example_screen.dart';
+import 'package:learn_flutter_hooks/useEffect-examples/login_ue_page.dart';
+import 'package:learn_flutter_hooks/useEffect-examples/timer_ue_page.dart';
 
 import 'login_page.dart';
 
@@ -42,9 +46,7 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Go to Login Page'),
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 20),
             ElevatedButton(
                 onPressed: () => Navigator.push(
                       context,
@@ -53,6 +55,43 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                 child: const Text('Go to Hooks Login Page')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ExampleScreen(),
+                      ),
+                    ),
+                child: const Text('Go to useEffect Example Page')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CounterUEPage(),
+                      ),
+                    ),
+                child: const Text('Go to useEffect Counter Page')),
+
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const TimerUEPage(),
+                      ),
+                    ),
+                child: const Text('Go to useEffect Timer Page')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginUEPage(),
+                      ),
+                    ),
+                child: const Text('Go to useEffect Login Page')),
           ],
         ),
       ),
