@@ -5,6 +5,7 @@ import 'package:learn_flutter_hooks/useEffect-examples/counter_ue_page.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/example_screen.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/login_ue_page.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/timer_ue_page.dart';
+import 'package:learn_flutter_hooks/useFuture/data_fetch_page.dart';
 
 import 'login_page.dart';
 
@@ -92,6 +93,15 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                 child: const Text('Go to useEffect Login Page')),
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DataFetchPage(),
+                      ),
+                    ),
+                child: const Text('Go to useFuture Data Fetch Page')),
           ],
         ),
       ),
