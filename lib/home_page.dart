@@ -3,6 +3,7 @@ import 'package:learn_flutter_hooks/combine-hooks/combined_hooks_form.dart';
 import 'package:learn_flutter_hooks/counter_page.dart';
 import 'package:learn_flutter_hooks/custom-hooks/timer_screen.dart';
 import 'package:learn_flutter_hooks/login_hooks_page.dart';
+import 'package:learn_flutter_hooks/paginated-list/paginated_list_screen.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/counter_ue_page.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/example_screen.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/login_ue_page.dart';
@@ -124,6 +125,16 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                 child: const Text('Go to Custom Hooks Timer')),
+
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PaginatedListScreen(),
+                      ),
+                    ),
+                child: const Text('Go to Paginated List')),
           ],
         ),
       ),
