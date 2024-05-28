@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_hooks/combine-hooks/combined_hooks_form.dart';
 import 'package:learn_flutter_hooks/counter_page.dart';
 import 'package:learn_flutter_hooks/login_hooks_page.dart';
 import 'package:learn_flutter_hooks/useEffect-examples/counter_ue_page.dart';
@@ -102,6 +103,16 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                 child: const Text('Go to useFuture Data Fetch Page')),
+
+            const SizedBox(height: 20),
+            ElevatedButton(
+                onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CombinedHooksForm(),
+                      ),
+                    ),
+                child: const Text('Go to Combine Hooks Form')),
           ],
         ),
       ),
