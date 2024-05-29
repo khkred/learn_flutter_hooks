@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_hooks/riverpod_hooks/eg1_counter_hook_page.dart';
 import 'package:learn_flutter_hooks/riverpod_hooks/eg2_favorite_animation_hook_page.dart';
+import 'package:learn_flutter_hooks/riverpod_hooks/eg3_future_provider_hooks_page.dart';
 
 class AllHooksRiverpodPage extends StatelessWidget {
   const AllHooksRiverpodPage({super.key});
@@ -23,6 +24,10 @@ class AllHooksRiverpodPage extends StatelessWidget {
             ElevatedButton(onPressed: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) => const AnimationHooksPage()));
             }, child: const Text('Example 2: Animation Hooks Page')),
+    const SizedBox(height: 20,),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const FutureProviderHooksPage()));
+            }, child: const Text('Example 3: FutureProvider Hooks Page')),
 
           ],
         ),
