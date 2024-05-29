@@ -26,9 +26,14 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const Text(
-                'Home Page',
-              ),
+              ElevatedButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AllHooksRiverpodPage(),
+                    ),
+                  ),
+                  child: const Text('Go to All Hooks Riverpod Page')),
               const SizedBox(height: 20),
               ElevatedButton(
                   onPressed: () => Navigator.push(
@@ -139,14 +144,7 @@ class HomePage extends StatelessWidget {
                   child: const Text('Go to Paginated List')),
 
               const SizedBox(height: 20),
-              ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const AllHooksRiverpodPage(),
-                    ),
-                  ),
-                  child: const Text('Go to All Hooks Riverpod Page')),
+
 
             ],
           ),
